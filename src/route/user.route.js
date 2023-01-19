@@ -19,7 +19,7 @@ app.post("/signup",async(req,res)=>{
         await user.save()
         res.status(201).send({msg:"User created Successfully"})
      }catch(e){
-        res.send({msg:e.message})
+        res.send({msg:"Account Already Exists"})
      }
     
       
